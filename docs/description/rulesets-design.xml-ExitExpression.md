@@ -1,17 +1,14 @@
+Exit statements make code untestable and harder to maintain. Instead, handle termination logic in higher-level scripts, returning appropriate error codes to the caller.
 
-An exit-expression within regular code is untestable and therefore it should be avoided.
-Consider to move the exit-expression into some kind of startup script where an
-error/exception code is returned to the calling environment.
-
-Example to avoid:
-
-    class Foo {
-        public function bar($param)  {
-            if ($param === 42) {
-                exit(23);
-            }
+Incorrect:
+```
+class Foo {
+    public function bar($param) {
+        if ($param === 42) {
+            exit(23);
         }
     }
+}
+```
 
-[Source](http://phpmd.org/rules/design.html#exitexpression)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:40:38.352Z -->

@@ -1,30 +1,28 @@
+Enhance readability and maintainability by reducing nesting in your code. Use early return statements instead of else blocks to make your control flow more linear and clear.
 
-Instead of using an else block, you can use an early return statement:
-
-    class Foo
-    {
-        public function bar($flag)
-        {
-            if ($flag) {
-                // one branch
-            } else {
-                // another branch
-            }
-        }
-    }
-
-Rewrite without the else:
-
-    class Foo
-    {
-        public function bar($flag)
-        {
-            if ($flag) {
-                // one branch
-                return;
-            }
-
+**Example:**
+```php
+// Original structure with else
+class Foo {
+    public function bar($flag) {
+        if ($flag) {
+            // one branch
+        } else {
             // another branch
         }
     }
-      
+}
+
+// Refactored structure without else
+class Foo {
+    public function bar($flag) {
+        if ($flag) {
+            // one branch
+            return;
+        }
+        // another branch
+    }
+}
+```
+
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:34:19.626Z -->

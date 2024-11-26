@@ -1,18 +1,16 @@
+Cyclomatic Complexity quantifies the number of decision points in a method. Keeping this number low improves maintainability. Refactor methods with high complexity to simplify them.
 
-Cyclomatic complexity is determined by the number of decision points in a method plus one for the method entry.
-The following keywords create new decision points: 'if', 'while', 'for', and 'case labels'. For example, this
-code has a cyclomatic complexity level of 2:
-
-    function foo()
-    {
-        $t=date("H");
-        if ($t<"20")
-        {
-            echo "Have a good day!";
-        }
+```php
+// High Complexity Example
+function example() {
+    if (cond1) {
+        //...
+    } else if (cond2) {
+        //...
     }
+}
+```
 
-1-4 indicates low complexity, 5-7 medium complexity, 8-10 high complexity and 11+ indicates very high complexity.
+Refactoring can reduce complexity.
 
-[Source](http://phpmd.org/rules/codesize.html#cyclomaticcomplexity)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:35:04.586Z -->

@@ -1,19 +1,13 @@
+Ensure readability and maintain coding standards by using camel case for variable names. Replace variables like `$some_variable` with `$someVariable`. This enhances consistency across the codebase.
 
-Naming variables in camel case is considered a best practice. Instead of writing:
+Example:
+```php
+class MyClass {
+     public function getSomething() {
+         $someVariable = new Something(); // Correct
+         $some_variable = new Something(); // Incorrect
+     }
+}
+```
 
-    class MyClass {
-         public function getSomething() {
-             $some_variable = new Something();
-         }
-    }
-
-You should write:
-
-    class MyClass {
-         public function getSomething() {
-             $someVariable = new Something();
-         }
-    }
-
-[Source](http://phpmd.org/rules/controversial.html#camelcasevariablename)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:40:19.967Z -->

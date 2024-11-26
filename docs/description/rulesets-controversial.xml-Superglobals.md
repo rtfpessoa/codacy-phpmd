@@ -1,11 +1,12 @@
+Directly accessing PHP superglobals scatters dependencies and poses security risks. Instead, encapsulate their access within a request class provided by your framework to enhance maintainability and security.
 
-[Superglobal variables](http://www.php.net/manual/en/language.variables.superglobals.php) in PHP should not be accessed directly.
-Instead of writing:
+Example:
+``
+// Direct access - not recommended
+$name = $_POST['foo'];
 
-    $name = $_POST['foo'];
+// Encapsulated access - recommended
+$name = $request->get('foo');
+``
 
-You should encapsulate the call in an single class.
-Most PHP frameworks already wrap Superglobals into a request object so you can use that.
-
-[Source](http://phpmd.org/rules/controversial.html#superglobals)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:38:48.061Z -->

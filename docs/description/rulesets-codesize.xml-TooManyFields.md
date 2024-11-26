@@ -1,7 +1,26 @@
+Classes with excessive fields are difficult to manage. Refactor these classes by grouping related fields into well-defined smaller classes. For example, replace separate `zip`, `city`, and `country` fields with an `Address` class. This improves code readability and maintainability. 
 
-Classes with lots of fields are difficult to maintain.
-You should redesign them and group the information in other classes - ex: instead of `zip`, `city`
-and `country` fields you could have an `Address` class
+Example:
+```java
+// Issue: Too many fields
+class Person {
+    String name;
+    String zip;
+    String city;
+    String country;
+}
 
-[Source](http://phpmd.org/rules/codesize.html#toomanyfields)
-      
+// Solution: Using a dedicated Address class
+class Person {
+    String name;
+    Address address;
+}
+
+class Address {
+    String zip;
+    String city;
+    String country;
+}
+```
+
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:37:49.183Z -->

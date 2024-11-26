@@ -1,6 +1,12 @@
+Static access increases dependencies and makes code hard to test. Use dependency injection through constructors instead for better modularity. Example:
+```php
+class MyClass {
+    private $dependency;
 
- Static access increases dependencies and leads to hard to test code. You should instead
- inject dependencies through the constructor
+    public function __construct($dependency) {
+        $this->dependency = $dependency;
+    }
+}
+```
 
- [Source](http://phpmd.org/rules/cleancode.html#staticaccess)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:34:41.151Z -->

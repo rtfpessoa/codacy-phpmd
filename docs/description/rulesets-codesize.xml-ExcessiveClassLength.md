@@ -1,6 +1,21 @@
+Overly long class files can be hard to maintain and understand. Break down extensive classes into smaller, more manageable ones to improve readability and adhere to the Single Responsibility Principle. 
 
-Long Class files are an indicator that the class may be trying to do too much.
-Try to break it down, and reduce the size to something manageable.
+Example:
+```java
+// Issue: Excessive class length
+class LongClass {
+  void method1() { /* ... */ }
+  void method2() { /* ... */ }
+  // Many more methods
+}
 
-[Source](http://phpmd.org/rules/codesize.html#excessiveclasslength)
-      
+// Solution: Break into smaller classes
+class ShortClass1 { 
+  void method1() { /* ... */ } 
+}
+class ShortClass2 { 
+  void method2() { /* ... */ } 
+}
+```
+
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:36:37.088Z -->

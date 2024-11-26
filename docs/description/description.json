@@ -1,26 +1,28 @@
 [
   {
     "patternId": "rulesets-cleancode.xml-ElseExpression",
-    "title": "Avoid else expressions",
-    "description": "Use return statements instead of else expression",
-    "timeToFix": 15
+    "title": "Eliminate Else Blocks with Early Returns",
+    "description": "Improves code clarity by using early returns.",
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:34:19.626Z"
   },
   {
     "patternId": "rulesets-cleancode.xml-StaticAccess",
-    "title": "Avoid static access",
-    "description": "Static access leads to hard to test code",
+    "title": "Avoid Static Method Access",
+    "description": "Reduces dependencies and improves testability.",
     "timeToFix": 15,
     "parameters": [
       {
         "name": "exceptions",
         "description": "Comma-separated class name list of exceptions"
       }
-    ]
+    ],
+    "patPatBotReviewed": "2024-05-24T11:34:41.151Z"
   },
   {
     "patternId": "rulesets-codesize.xml-CyclomaticComplexity",
-    "title": "Cyclomatic complexity",
-    "description": "This pattern reports methods with high cyclomatic complexity",
+    "title": "Understanding Cyclomatic Complexity",
+    "description": "Measure complexity by counting decision points in your code.",
     "parameters": [
       {
         "name": "reportLevel",
@@ -35,157 +37,175 @@
         "description": "Indicate if method average violation should be included"
       }
     ],
-    "timeToFix": 30
+    "timeToFix": 30,
+    "patPatBotReviewed": "2024-05-24T11:35:04.586Z"
   },
   {
     "patternId": "rulesets-codesize.xml-NPathComplexity",
-    "title": "NPath complexity",
-    "description": "This pattern reports methods with a large number of possible paths",
+    "title": "Understanding and Managing NPath Complexity",
+    "description": "Measures possible code paths in methods.",
     "parameters": [
       {
         "name": "minimum",
         "description": "Reporting threshold"
       }
     ],
-    "timeToFix": 30
+    "timeToFix": 30,
+    "patPatBotReviewed": "2024-05-24T11:35:24.530Z"
   },
   {
     "patternId": "rulesets-codesize.xml-ExcessiveMethodLength",
-    "title": "Excessive method length",
-    "description": "This pattern reports excessively long methods.",
+    "title": "Avoid Long Methods for Better Code Quality",
+    "description": "Flag excessively long methods for refactoring.",
     "parameters": [
       {
         "name": "minimum",
         "description": "Reporting threshold for the number of lines in a method"
       }
     ],
-    "timeToFix": 15
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:35:59.055Z"
   },
   {
     "patternId": "rulesets-codesize.xml-ExcessiveClassLength",
-    "title": "Excessive class length",
-    "description": "This pattern reports excessively long classes.",
+    "title": "Optimize Class Size for Better Maintainability",
+    "description": "Encourages breaking down lengthy class files.",
     "parameters": [
       {
         "name": "minimum",
         "description": "Reporting threshold for the number of lines in a class"
       }
     ],
-    "timeToFix": 15
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:36:37.088Z"
   },
   {
     "patternId": "rulesets-codesize.xml-ExcessiveParameterList",
-    "title": "Excessive parameters",
-    "description": "This pattern reports methods with a high number of parameters.",
+    "title": "Refactor Long Parameter Lists",
+    "description": "Refactor long parameter lists for better maintainability.",
     "parameters": [
       {
         "name": "minimum",
         "description": "Reporting threshold for the number of arguments in a method"
       }
     ],
-    "timeToFix": 15
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:37:01.827Z"
   },
   {
     "patternId": "rulesets-codesize.xml-ExcessivePublicCount",
-    "title": "Excessive public attributes",
-    "description": "This pattern reports classes with a high number of public methods and attributes.",
+    "title": "Refactor Classes with Excessive Public Members",
+    "description": "Too many public methods and attributes in a class.",
     "parameters": [
       {
         "name": "minimum",
         "description": "Reporting threshold for the number of public methods and attributes in a class"
       }
     ],
-    "timeToFix": 15
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:37:22.495Z"
   },
   {
     "patternId": "rulesets-codesize.xml-TooManyFields",
-    "title": "Excessive fields",
-    "description": "This pattern reports classes with a high number of fields.",
+    "title": "Minimize Class Field Count",
+    "description": "Classes with too many fields can be hard to maintain.",
     "parameters": [
       {
         "name": "maxfields",
         "description": "Reporting threshold for the number of fields in a class"
       }
     ],
-    "timeToFix": 15
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:37:49.183Z"
   },
   {
     "patternId": "rulesets-codesize.xml-TooManyMethods",
-    "title": "Excessive methods",
-    "description": "This pattern reports classes with a high number of methods.",
+    "title": "Refactor Classes with Excessive Methods",
+    "description": "Classes with too many methods are hard to maintain.",
     "parameters": [
       {
         "name": "maxmethods",
         "description": "Reporting threshold for the number of methods in a class"
       }
     ],
-    "timeToFix": 15
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:38:09.790Z"
   },
   {
     "patternId": "rulesets-codesize.xml-ExcessiveClassComplexity",
-    "title": "Weighted method count",
-    "description": "This pattern reports classes with a high weighted method count.",
+    "title": "Manage Class Complexity for Better Code Maintainability",
+    "description": "Monitor and manage class complexity effectively.",
     "parameters": [
       {
         "name": "maximum",
         "description": "The maximum WMC tolerable for a class"
       }
     ],
-    "timeToFix": 10
+    "timeToFix": 10,
+    "patPatBotReviewed": "2024-05-24T11:38:32.968Z"
   },
   {
     "patternId": "rulesets-controversial.xml-Superglobals",
-    "title": "Encapsulate Superglobals",
-    "description": "Prohibit direct access to superglobal variables",
-    "timeToFix": 10
+    "title": "Encapsulate PHP Superglobal Variables",
+    "description": "Avoid direct access to PHP superglobal variables.",
+    "timeToFix": 10,
+    "patPatBotReviewed": "2024-05-24T11:38:48.061Z"
   },
   {
     "patternId": "rulesets-controversial.xml-CamelCaseClassName",
-    "title": "Enforce CamelCase in classes",
-    "description": "Requires all class names to use the CamelCase style",
-    "timeToFix": 5
+    "title": "Use CamelCase for PHP Class Names",
+    "description": "Ensures PHP classes follow CamelCase naming convention.",
+    "timeToFix": 5,
+    "patPatBotReviewed": "2024-05-24T11:39:02.495Z"
   },
   {
     "patternId": "rulesets-controversial.xml-CamelCasePropertyName",
-    "title": "Enforce CamelCase in properties",
-    "description": "Requires all property names to use the CamelCase style",
-    "timeToFix": 5
+    "title": "Use Camel Case for Class Properties",
+    "description": "Standardize class properties using camel case.",
+    "timeToFix": 5,
+    "patPatBotReviewed": "2024-05-24T11:39:16.793Z"
   },
   {
     "patternId": "rulesets-controversial.xml-CamelCaseMethodName",
-    "title": "Enforce CamelCase in methods",
-    "description": "Requires all method names to use the CamelCase style",
-    "timeToFix": 5
+    "title": "Enforce Camel Case for Method Names",
+    "description": "Ensure methods use camel case naming convention.",
+    "timeToFix": 5,
+    "patPatBotReviewed": "2024-05-24T11:39:42.439Z"
   },
   {
     "patternId": "rulesets-controversial.xml-CamelCaseParameterName",
-    "title": "Enforce CamelCase in parameters",
-    "description": "Requires all parameter names to use the CamelCase style",
-    "timeToFix": 5
+    "title": "Use Camel Case for Parameter Names",
+    "description": "Adopt camel case for clearer parameter naming.",
+    "timeToFix": 5,
+    "patPatBotReviewed": "2024-05-24T11:39:58.213Z"
   },
   {
     "patternId": "rulesets-controversial.xml-CamelCaseVariableName",
-    "title": "Enforce CamelCase in variables",
-    "description": "Requires all variable names to use the CamelCase style",
-    "timeToFix": 5
+    "title": "Enforce Camel Case for Variable Names",
+    "description": "Use camel case for naming variables.",
+    "timeToFix": 5,
+    "patPatBotReviewed": "2024-05-24T11:40:19.967Z"
   },
   {
     "patternId": "rulesets-design.xml-ExitExpression",
-    "title": "Prohibit exit-expression",
-    "description": "Prohibit the use of exit-expressions within regular code, it is not testable",
-    "timeToFix": 10
+    "title": "Avoid Using Exit Statements in Code",
+    "description": "Avoid using exit expressions in regular code.",
+    "timeToFix": 10,
+    "patPatBotReviewed": "2024-05-24T11:40:38.352Z"
   },
   {
     "patternId": "rulesets-design.xml-EvalExpression",
-    "title": "Prohibit eval expression",
-    "description": "Prohibit the use of eval, it is untestable, a security risk and bad practice",
-    "timeToFix": 15
+    "title": "Avoid Using `eval` Expressions",
+    "description": "Replace `eval` expressions for security and maintainability.",
+    "timeToFix": 15,
+    "patPatBotReviewed": "2024-05-24T11:40:54.376Z"
   },
   {
     "patternId": "rulesets-design.xml-GotoStatement",
-    "title": "Prohibit goto",
-    "description": "Prohibit the use of goto, it makes the code harder to read nearly impossible to understand",
-    "timeToFix": 10
+    "title": "Avoid Using Goto Statements",
+    "description": "Promote readability by avoiding `goto` statements.",
+    "timeToFix": 10,
+    "patPatBotReviewed": "2024-05-24T11:41:26.020Z"
   },
   {
     "patternId": "rulesets-design.xml-NumberOfChildren",
@@ -362,11 +382,11 @@
     "timeToFix": 5
   },
   {
-  "patternId": "rulesets-design.xml-EmptyCatchBlock",
-  "parameters": [],
-  "title": "Usually empty try-catch",
-  "description": "Usually empty try-catch is a bad idea because you are silently swallowing an error condition and then continuing execution.",
-  "timeToFix": 5
+    "patternId": "rulesets-design.xml-EmptyCatchBlock",
+    "parameters": [],
+    "title": "Usually empty try-catch",
+    "description": "Usually empty try-catch is a bad idea because you are silently swallowing an error condition and then continuing execution.",
+    "timeToFix": 5
   },
   {
     "patternId": "rulesets-design.xml-CountInLoopExpression",

@@ -1,7 +1,13 @@
+Classes with many public members are harder to test and maintain. Consider refactoring to smaller, focused classes to improve modularity. Example of issue:
+```php
+class LargeClass {
+    public $data1; public $data2; // too many attributes
+    public function method1() {} // too many methods
+}
+class ExtractedClass {
+    private $data1; // limited and focused attributes
+    public function method1() {} // encapsulated and focused methods
+}
+```
 
-A large number of public methods and attributes declared in a class can indicate
-the class may need to be broken up. Properly testing a class with a large number of
-publicly exposed members is difficult and time consuming.
-
-[Source](http://phpmd.org/rules/codesize.html#excessivepubliccount)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:37:22.495Z -->

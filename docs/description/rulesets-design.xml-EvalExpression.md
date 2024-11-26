@@ -1,17 +1,11 @@
+`Eval` expressions are risky, hard to test, and reduce code quality. Avoid using `eval` by substituting with regular code constructs. For example:
 
-An eval-expression is untestable, a security risk and bad practice.
-Therefore it should be avoided.
-Consider to replace the eval-expression with regular code.
+```php
+// Avoid
+eval('$param = 23;');
 
-Example to avoid:
+// Safer alternative
+$param = 23;
+```
 
-    class Foo {
-        public function bar($param)  {
-            if ($param === 42) {
-                eval('$param = 23;');
-            }
-        }
-    }
-
-[Source](http://phpmd.org/rules/design.html#evalexpression)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:40:54.376Z -->

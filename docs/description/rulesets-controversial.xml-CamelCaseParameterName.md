@@ -1,15 +1,13 @@
+For better readability, name method parameters using camel case. Avoid underscores.
 
-Naming methods in camel case is considered a best practice. Instead of writing:
+**Issue**:
+```php
+function exampleFunction($some_parameter) { }
+```
 
-    class MyClass {
-         public function getSomething($some_argument) { }
-    }
+**Solution**:
+```php
+function exampleFunction($someParameter) { }
+```
 
-You should write:
-
-    class MyClass {
-         public function getSomething($someArgument) { }
-    }
-
-[Source](http://phpmd.org/rules/controversial.html#camelcaseparametername)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:39:58.213Z -->

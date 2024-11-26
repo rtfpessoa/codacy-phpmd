@@ -1,6 +1,27 @@
+Long methods often do too much and can be hard to maintain. Break them into smaller, more manageable methods. This improves readability and adheres to the Single Responsibility Principle. 
+Example:
+```java
+// Issue: Long method
+public void processOrder() {
+    validateOrder();
+    applyDiscounts();
+    calculateTotal();
+    updateInventory();
+    sendConfirmation();
+}
 
-Long methods are an indicator that the method is doing too much.
-Try to break it down, and reduce the size to something manageable.
+// Solution: Refactored into smaller methods
+public void processOrder() {
+    validateOrder();
+    applyDiscounts();
+    calculateTotal();
+    finalizeOrder();
+}
 
-[Source](http://phpmd.org/rules/codesize.html#excessivemethodlength)
-      
+public void finalizeOrder() {
+    updateInventory();
+    sendConfirmation();
+}
+```
+
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:35:59.055Z -->

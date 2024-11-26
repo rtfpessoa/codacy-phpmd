@@ -1,11 +1,8 @@
+Class names in PHP should use CamelCase for better readability and consistency. For example, use `class MyClass` instead of `class my_class`.
+Example:
+```
+class my_class { }    // Incorrect
+class MyClass { }    // Correct
+```
 
-Naming PHP classes in camel case is considered a best practice. Instead of writing:
-
-    class my_class { }
-
-You should write:
-
-    class MyClass { }
-
-[Source](http://phpmd.org/rules/controversial.html#camelcaseclassname)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:39:02.495Z -->

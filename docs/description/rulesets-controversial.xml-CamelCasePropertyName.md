@@ -1,15 +1,3 @@
+Ensure all class properties are named using camel case for consistency and readability. For example, instead of `$my_property`, use `$MyProperty`.
 
-Naming class properties in camel case is considered a best practice. Instead of writing:
-
-    class MyClass {
-        protected $my_property;
-    }
-
-You should write:
-
-    class MyClass {
-        protected $MyProperty;
-    }
-
-[Source](http://phpmd.org/rules/controversial.html#camelcasepropertyname)
-      
+<!-- Codacy PatPatBot reviewed: 2024-05-24T11:39:16.793Z -->
